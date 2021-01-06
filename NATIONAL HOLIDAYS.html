@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>National holidays</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<button class="accordion"> Republic Day</button>
+<div class="panel">
+  <p>
+Republic Day is celebrated all over the country on 26th January every year. On this day, i.e., 26th January, 1950, India’s constitution came into force. This day is important because on this day our country became a Democratic republic and all citizens were given equal rights to vote and choose the government. A special celebration (grand parade) is held at Rajpath in New Delhi every year. On this day, the National song, “Jana Gana Mana” can be heard throughout the country.</p>
+</div>
+
+<button class="accordion">Independence Day
+</button>
+<div class="panel">
+  <p>
+Independence Day is celebrated all over the country on 15th August each year. On this day, i.e., 15th August, 1947, India gained independence from British rule and hence in other countries this day is also termed as “India Day”. We pay tribute to the freedom fighters who sacrificed their youth for our independence. The Tri-color National flag is hoisted at Red Fort (New Delhi) by the Prime Minister. Every Indians feel proud on this day.</p>
+</div>
+
+<button class="accordion">Gandhi Jayanti
+</button>
+<div class="panel">
+  <p>
+Gandhi Jayanti occurs annually on 2nd October to celebrate the birthday of Mahatma Gandhi, popularly known as ‘Father of the Nation’. The untiring efforts of Mahatma Gandhi helped India to gain its freedom and independence. ‘Raghupati Raghav’, his favourite song, can be heard on this day.</p>
+</div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
